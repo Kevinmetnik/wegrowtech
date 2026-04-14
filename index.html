@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WeGrowTech - IT Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeGrowTech</title>
 
 <style>
 body {
     margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background:#0b1120;
+    background:#0f172a;
     color:#fff;
 }
 
@@ -19,36 +18,19 @@ nav {
     justify-content:space-between;
     align-items:center;
     padding:15px 40px;
-    background:#0b1120;
+    background:#0f172a;
     border-bottom:1px solid #1e293b;
 }
 
 nav img {
-    height:50px;
-}
-
-nav a {
-    color:#ccc;
-    margin-left:20px;
-    text-decoration:none;
-    font-size:14px;
-}
-
-nav a:hover {
-    color:#00eaff;
+    height:60px;
 }
 
 /* HERO */
 .hero {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:60px 40px;
-    background:linear-gradient(135deg,#0a66c2,#020617);
-}
-
-.hero-text {
-    max-width:500px;
+    padding:70px 40px;
+    background:linear-gradient(135deg,#0a66c2,#00c6ff);
+    text-align:center;
 }
 
 .hero h1 {
@@ -57,18 +39,16 @@ nav a:hover {
 }
 
 .hero p {
-    color:#ccc;
+    color:#e2e8f0;
 }
 
 .btn {
-    display:inline-block;
     margin-top:20px;
     padding:12px 25px;
-    background:#00eaff;
-    color:#000;
+    background:#000;
+    color:#fff;
     border-radius:25px;
     text-decoration:none;
-    font-weight:bold;
 }
 
 /* SECTION */
@@ -77,11 +57,6 @@ nav a:hover {
     text-align:center;
 }
 
-.section h2 {
-    margin-bottom:20px;
-}
-
-/* CARDS */
 .cards {
     display:flex;
     flex-wrap:wrap;
@@ -89,17 +64,17 @@ nav a:hover {
 }
 
 .card {
-    background:#111827;
+    background:#1e293b;
     margin:15px;
-    padding:20px;
+    padding:25px;
     width:260px;
     border-radius:12px;
     transition:0.3s;
 }
 
 .card:hover {
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(0,234,255,0.2);
+    transform:translateY(-6px);
+    background:#334155;
 }
 
 /* FOOTER */
@@ -114,60 +89,37 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <img src="logo.png">
-    <div>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Plans</a>
-        <a href="#">Contact</a>
-    </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-    <div class="hero-text">
-        <h1>IT Support That Grows Your Business 🚀</h1>
-        <p>Professional Desktop Support, AMC Services, Network Setup & Microsoft 365 Solutions.</p>
-        <a class="btn" href="#">Get Started</a>
-    </div>
+    <h1>WeGrowTech 🚀</h1>
+    <p>Professional IT Support & AMC Services</p>
+    <a class="btn" href="#">Get Started</a>
 </div>
 
-<!-- SERVICES -->
 <div class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-        <div class="card">Desktop Support</div>
-        <div class="card">AMC Management</div>
-        <div class="card">Network Setup</div>
-        <div class="card">Printer Support</div>
-        <div class="card">Microsoft 365</div>
-    </div>
+<h2>Our Services</h2>
+<div class="cards">
+<div class="card">Desktop Support</div>
+<div class="card">AMC Management</div>
+<div class="card">Network Setup</div>
+<div class="card">Microsoft 365</div>
+</div>
 </div>
 
-<!-- PLANS -->
 <div class="section">
-    <h2>AMC Plans</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Basic</h3>
-            <p>Reactive Support</p>
-        </div>
-        <div class="card">
-            <h3>Standard</h3>
-            <p>Preventive + Support</p>
-        </div>
-        <div class="card">
-            <h3>Premium</h3>
-            <p>Complete IT Management</p>
-        </div>
-    </div>
+<h2>AMC Plans</h2>
+<div class="cards">
+<div class="card">Basic</div>
+<div class="card">Standard</div>
+<div class="card">Premium</div>
+</div>
 </div>
 
-<!-- FOOTER -->
 <footer>
-© 2026 WeGrowTech | All Rights Reserved
+© 2026 WeGrowTech
 </footer>
 
 </body>
