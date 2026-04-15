@@ -1,84 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>WeGrowTech - IT AMC Services</title>
+<title>WeGrowTech - IT AMC & Support Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body {margin:0;font-family:Segoe UI;background:#f5f7fb;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Segoe UI;background:#f5f7fb;color:#333;}
 
-/* NAV */
-nav {
+/* NAVBAR */
+nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+padding:15px 50px;
 background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
-position:sticky;top:0;
+position:sticky;
+top:0;
 z-index:1000;
 }
 
-nav img {height:60px;}
-nav a {
-margin:0 10px;
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.logo img{height:55px;}
+.logo span{font-size:22px;font-weight:600;color:#0a66c2;}
+
+nav a{
+margin:0 15px;
 text-decoration:none;
 color:#333;
 font-weight:500;
 }
 
 /* HERO */
-.hero {
+.hero{
 height:90vh;
 background:linear-gradient(135deg,#0a66c2,#00c6ff);
 display:flex;
 align-items:center;
 justify-content:center;
+text-align:center;
 color:white;
+padding:20px;
+}
+
+.hero h1{font-size:48px;margin-bottom:15px;}
+.hero p{font-size:18px;margin-bottom:20px;}
+
+.btn{
+background:white;
+color:#0a66c2;
+padding:12px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* SECTION */
+.section{
+padding:70px 50px;
 text-align:center;
 }
 
-.hero h1 {font-size:42px;}
-.btn {
-background:white;
-color:#0a66c2;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-margin-top:15px;
-display:inline-block;
+.section h2{
+font-size:30px;
+margin-bottom:30px;
 }
 
-/* SERVICES */
-.section {padding:60px;text-align:center;}
-
-.grid {
+/* GRID */
+.grid{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
+gap:20px;
 }
 
-.card {
+.card{
 background:white;
 padding:25px;
-margin:15px;
-width:250px;
-border-radius:10px;
+width:260px;
+border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
-cursor:pointer;
 transition:0.3s;
 }
 
-.card:hover {
-transform:translateY(-5px);
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* WHY US */
+.features{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.feature{
+width:250px;
+background:white;
+padding:20px;
+border-radius:10px;
 }
 
 /* FOOTER */
-footer {
+footer{
 background:#0a66c2;
 color:white;
 text-align:center;
-padding:20px;
+padding:25px;
+margin-top:40px;
 }
 </style>
 
@@ -86,38 +121,104 @@ padding:20px;
 
 <body>
 
+<!-- NAV -->
 <nav>
+<div class="logo">
 <img src="logo.png">
+<span>WeGrowTech</span>
+</div>
+
 <div>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="amc.html">AMC</a>
-<a href="contact.html">Contact</a>
+<a href="#services">Services</a>
+<a href="#amc">AMC</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
 <div>
-<h1>WeGrowTech 🚀</h1>
-<p>Professional IT Support & AMC Services</p>
-<a href="contact.html" class="btn">Get Free Consultation</a>
+<h1>Grow Your Business with Smart IT Support 🚀</h1>
+<p>Desktop | Network | Server | Microsoft 365 | Security</p>
+<a href="#contact" class="btn">Get Free Consultation</a>
 </div>
 </div>
 
-<div class="section">
-<h2>Our Services</h2>
+<!-- SERVICES -->
+<div class="section" id="services">
+<h2>Our IT Services</h2>
 
 <div class="grid">
-<div class="card" onclick="location.href='services.html'">Desktop Support</div>
-<div class="card" onclick="location.href='services.html'">AMC Maintenance</div>
-<div class="card" onclick="location.href='services.html'">Network Setup</div>
-<div class="card" onclick="location.href='services.html'">Microsoft 365</div>
+<div class="card">
+<h3>Desktop Support</h3>
+<p>Hardware & software troubleshooting for businesses.</p>
 </div>
 
+<div class="card">
+<h3>AMC Maintenance</h3>
+<p>Annual maintenance with proactive monitoring.</p>
+</div>
+
+<div class="card">
+<h3>Network Setup</h3>
+<p>LAN, WiFi, firewall & router configuration.</p>
+</div>
+
+<div class="card">
+<h3>Microsoft 365</h3>
+<p>Email, Teams, OneDrive & cloud solutions.</p>
+</div>
+</div>
+</div>
+
+<!-- AMC -->
+<div class="section" id="amc">
+<h2>AMC Plans</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Basic</h3>
+<p>On-demand IT support</p>
+</div>
+
+<div class="card">
+<h3>Standard</h3>
+<p>Monthly preventive maintenance</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<p>24/7 support + complete IT management</p>
+</div>
+</div>
+
+</div>
+
+<!-- WHY US -->
+<div class="section">
+<h2>Why Choose Us?</h2>
+
+<div class="features">
+<div class="feature">24/7 Support</div>
+<div class="feature">Fast Response</div>
+<div class="feature">Certified Engineers</div>
+<div class="feature">Affordable AMC</div>
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact Us</h2>
+
+<p>Email: info@wegrowtech.in</p>
+<p>Phone: +91 XXXXX XXXXX</p>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
 </div>
 
 <footer>
-© 2026 WeGrowTech
+© 2026 WeGrowTech | All Rights Reserved
 </footer>
 
 </body>
