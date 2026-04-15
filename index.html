@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WeGrowTech</title>
+<title>WeGrowTech - IT AMC Services</title>
 
 <style>
 body {
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#0f172a;
-    color:#fff;
+    font-family:Arial;
+    background:#f5f7fb;
+    color:#333;
 }
 
 /* NAVBAR */
@@ -18,37 +18,30 @@ nav {
     justify-content:space-between;
     align-items:center;
     padding:15px 40px;
-    background:#0f172a;
-    border-bottom:1px solid #1e293b;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav img {
-    height:60px;
+    height:50px;
+}
+
+nav a {
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
 }
 
 /* HERO */
 .hero {
-    padding:70px 40px;
-    background:linear-gradient(135deg,#0a66c2,#00c6ff);
+    background:#0a66c2;
+    color:white;
+    padding:60px 40px;
     text-align:center;
 }
 
 .hero h1 {
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.hero p {
-    color:#e2e8f0;
-}
-
-.btn {
-    margin-top:20px;
-    padding:12px 25px;
-    background:#000;
-    color:#fff;
-    border-radius:25px;
-    text-decoration:none;
+    font-size:40px;
 }
 
 /* SECTION */
@@ -57,32 +50,44 @@ nav img {
     text-align:center;
 }
 
-.cards {
+/* SERVICES GRID */
+.grid {
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
 }
 
-.card {
-    background:#1e293b;
+.box {
+    background:white;
     margin:15px;
     padding:25px;
-    width:260px;
-    border-radius:12px;
+    width:280px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
     transition:0.3s;
 }
 
-.card:hover {
-    transform:translateY(-6px);
-    background:#334155;
+.box:hover {
+    transform:translateY(-5px);
+}
+
+/* BUTTON */
+.btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#0a66c2;
+    color:white;
+    border-radius:20px;
+    text-decoration:none;
 }
 
 /* FOOTER */
 footer {
-    background:#020617;
+    background:#222;
+    color:#aaa;
     padding:20px;
     text-align:center;
-    color:#aaa;
 }
 </style>
 </head>
@@ -90,36 +95,71 @@ footer {
 <body>
 
 <nav>
-    <img src="logo.png">
+    <img src="logo.png" style="height:50px;">
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">AMC</a>
+        <a href="#">Contact</a>
+    </div>
 </nav>
 
 <div class="hero">
-    <h1>WeGrowTech 🚀</h1>
-    <p>Professional IT Support & AMC Services</p>
-    <a class="btn" href="#">Get Started</a>
+    <h1>IT AMC Services for Your Business</h1>
+    <p>Reliable Desktop Support, Network Management & IT Solutions</p>
 </div>
 
 <div class="section">
-<h2>Our Services</h2>
-<div class="cards">
-<div class="card">Desktop Support</div>
-<div class="card">AMC Management</div>
-<div class="card">Network Setup</div>
-<div class="card">Microsoft 365</div>
+<h2>Our IT Services</h2>
+
+<div class="grid">
+<div class="box">Desktop Support</div>
+<div class="box">AMC Maintenance</div>
+<div class="box">Network Setup</div>
+<div class="box">Printer Support</div>
+<div class="box">Microsoft 365</div>
+<div class="box">Server Support</div>
 </div>
+
+</div>
+
+<div class="section">
+<h2>Why Choose Us?</h2>
+
+<div class="grid">
+<div class="box">24/7 Support</div>
+<div class="box">Experienced Engineers</div>
+<div class="box">Quick Response Time</div>
+</div>
+
 </div>
 
 <div class="section">
 <h2>AMC Plans</h2>
-<div class="cards">
-<div class="card">Basic</div>
-<div class="card">Standard</div>
-<div class="card">Premium</div>
+
+<div class="grid">
+<div class="box">
+<h3>Basic</h3>
+<p>Reactive Support</p>
+</div>
+
+<div class="box">
+<h3>Standard</h3>
+<p>Preventive + Support</p>
+</div>
+
+<div class="box">
+<h3>Premium</h3>
+<p>Complete IT Management</p>
 </div>
 </div>
 
+<a class="btn" href="#">Contact Us</a>
+
+</div>
+
 <footer>
-© 2026 WeGrowTech
+© 2026 WeGrowTech | All Rights Reserved
 </footer>
 
 </body>
