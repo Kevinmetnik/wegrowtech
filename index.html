@@ -5,123 +5,201 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body{margin:0;font-family:Segoe UI;background:#fff;color:#111}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,Segoe UI;background:#fff;color:#111;}
 
 /* NAV */
 nav{
 display:flex;justify-content:space-between;align-items:center;
 padding:18px 60px;background:#fff;border-bottom:1px solid #eee;
+position:sticky;top:0;z-index:1000;
 }
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{height:55px}
-.logo b{font-size:22px;color:#0a66c2}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo img{
+height:60px;           /* SHARP SIZE */
+width:auto;
+background:#000;       /* CONTRAST FIX */
+padding:6px;
+border-radius:6px;
+}
+.logo span{font-size:22px;font-weight:600;color:#0a66c2;}
 
-nav a{margin-left:25px;text-decoration:none;color:#333}
+nav a{margin-left:25px;text-decoration:none;color:#333;font-weight:500;}
 
 /* HERO */
 .hero{
-padding:80px 20px;text-align:center;
-background:#f5f7fb;
+height:75vh;
+display:flex;align-items:center;justify-content:center;
+text-align:center;
+background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover;
+position:relative;color:white;
 }
-.hero h1{font-size:42px}
-.hero p{margin:10px 0 20px;color:#666}
+.hero::after{
+content:'';position:absolute;top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+}
+.hero-content{position:relative;z-index:1;}
+
+.hero h1{font-size:48px;}
+.hero p{margin:15px 0;font-size:18px;}
+
 .btn{
-background:#0a66c2;color:#fff;
-padding:12px 25px;border-radius:25px;text-decoration:none;
+background:#0a66c2;color:white;
+padding:12px 25px;border-radius:25px;
+text-decoration:none;
 }
 
 /* SECTION */
-.section{padding:70px 60px}
-.section h2{margin-bottom:20px}
+.section{padding:70px 60px;text-align:center;}
+.section h2{margin-bottom:30px;font-size:32px;}
 
-/* SERVICES */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 .card{
-border:1px solid #eee;padding:25px;border-radius:10px;
+background:white;padding:25px;border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:.3s;
+cursor:pointer;
 }
-.card:hover{transform:translateY(-5px);}
+.card:hover{transform:translateY(-6px);}
 
 /* WHY */
-.why{display:flex;flex-wrap:wrap;gap:20px}
-.why div{flex:1 1 200px}
+.why{
+display:flex;flex-wrap:wrap;gap:20px;justify-content:center;
+}
+.why div{
+background:#f5f7fb;
+padding:20px;border-radius:10px;
+width:200px;
+}
+
+/* FORM */
+input,textarea{
+width:300px;
+padding:10px;
+margin:10px;
+}
 
 /* FOOTER */
-footer{padding:40px;text-align:center;background:#f5f7fb}
+footer{
+padding:40px;text-align:center;background:#f5f7fb;
+}
+
+/* ANIMATION */
+.fade{opacity:0;transform:translateY(20px);transition:1s;}
+.show{opacity:1;transform:translateY(0);}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50%;
+text-decoration:none;font-size:20px;
+}
 </style>
 
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="logo">
 <img src="logo.png">
-<b>WeGrowTech</b>
+<span>WeGrowTech</span>
 </div>
 
 <div>
-<a href="services.html">Services</a>
-<a href="amc.html">AMC</a>
-<a href="contact.html">Contact</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-<h1>Reliable IT Support for Growing Businesses</h1>
-<p>We manage your IT so you can focus on growth.</p>
-<a href="contact.html" class="btn">Get Started</a>
+<div class="hero-content">
+<h1>We Maintain. You Grow.</h1>
+<p>Reliable support for modern businesses</p>
+<a href="#contact" class="btn">Get Started</a>
+</div>
 </div>
 
-<div class="section">
-<h2>Our Core Services</h2>
+<!-- SERVICES -->
+<div class="section fade" id="services">
+<h2>Our Services</h2>
 
 <div class="grid">
-<div class="card" onclick="location.href='services.html'">
+<div class="card" onclick="location.href='desktop.html'">
 <h3>Desktop Support</h3>
-<p>End-to-end troubleshooting & maintenance</p>
+<p>Troubleshooting, installation, maintenance</p>
 </div>
 
-<div class="card" onclick="location.href='services.html'">
+<div class="card" onclick="location.href='amc.html'">
 <h3>AMC Services</h3>
-<p>Annual contracts with proactive monitoring</p>
+<p>Annual maintenance & monitoring</p>
 </div>
 
-<div class="card" onclick="location.href='services.html'">
-<h3>Network Management</h3>
-<p>Secure and scalable network solutions</p>
+<div class="card" onclick="location.href='network.html'">
+<h3>Network Setup</h3>
+<p>Secure LAN & WiFi solutions</p>
 </div>
 
-<div class="card" onclick="location.href='services.html'">
+<div class="card" onclick="location.href='m365.html'">
 <h3>Microsoft 365</h3>
-<p>Cloud, email & collaboration setup</p>
-</div>
+<p>Email & cloud solutions</p>
 </div>
 </div>
 
-<div class="section">
+</div>
+
+<!-- WHY -->
+<div class="section fade">
 <h2>Why WeGrowTech</h2>
 
 <div class="why">
-<div><b>Fast Response</b><br>Quick resolution for all issues</div>
-<div><b>Experienced Team</b><br>Certified engineers</div>
-<div><b>Cost Effective</b><br>Affordable AMC plans</div>
-</div>
+<div>⚡ Fast Response</div>
+<div>🛠 Expert Engineers</div>
+<div>📞 24/7 Support</div>
+<div>💰 Cost Effective</div>
 </div>
 
-<div class="section">
-<h2>Let’s Talk</h2>
-<p>Email: info@wegrowtech.in</p>
-<a href="https://wa.me/91XXXXXXXXXX" class="btn">WhatsApp Us</a>
+</div>
+
+<!-- CONTACT -->
+<div class="section fade" id="contact">
+<h2>Contact Us</h2>
+
+<form action="https://formspree.io/f/yourid" method="POST">
+<input name="name" placeholder="Name" required><br>
+<input name="email" placeholder="Email" required><br>
+<textarea name="message" placeholder="Message"></textarea><br>
+<button class="btn">Send</button>
+</form>
+
 </div>
 
 <footer>
 © 2026 WeGrowTech
 </footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
 </html>
