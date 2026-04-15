@@ -1,10 +1,11 @@
-const elements = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card");
 
 window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    const pos = el.getBoundingClientRect().top;
-    if (pos < window.innerHeight - 100) {
-      el.classList.add("show");
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < window.innerHeight - 80) {
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
     }
   });
 });
