@@ -2,23 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Contact | WegroTech</title>
-<link rel="stylesheet" href="style.css">
+<title>Contact | WegrowTech</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<section class="contact">
-  <h2>Contact Us</h2>
+<header class="navbar">
+  <div class="logo">WegrowTech</div>
+</header>
 
-  <form>
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Your Requirement"></textarea>
-    <button type="submit">Submit</button>
-  </form>
+<section class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
 
+    <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Requirement"></textarea>
+
+      <button type="submit" class="btn primary">Submit</button>
+
+    </form>
+
+  </div>
 </section>
+
+<footer class="footer">
+  <p>WegrowTech</p>
+</footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">Chat</a>
 
 </body>
 </html>
