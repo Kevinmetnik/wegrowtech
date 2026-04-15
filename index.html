@@ -1,74 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>WeGrowTech - IT AMC Services</title>
+<title>WeGrowTech</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,Segoe UI;background:#fff;color:#1d1d1f;}
+body{margin:0;font-family:Segoe UI;background:#fff;color:#111}
 
 /* NAV */
 nav{
 display:flex;justify-content:space-between;align-items:center;
-padding:15px 50px;background:#fff;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;top:0;z-index:1000;
+padding:18px 60px;background:#fff;border-bottom:1px solid #eee;
 }
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{height:65px;} /* BIGGER + CLEAR */
-.logo span{font-size:20px;font-weight:600;color:#0a66c2;}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:55px}
+.logo b{font-size:22px;color:#0a66c2}
 
-nav a{margin-left:20px;text-decoration:none;color:#333;font-weight:500;}
+nav a{margin-left:25px;text-decoration:none;color:#333}
 
-/* HERO (FIXED HEIGHT) */
+/* HERO */
 .hero{
-height:70vh; /* NOT TOO BIG */
-display:flex;flex-direction:column;
-justify-content:center;align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#0a66c2,#00c6ff);
-color:#fff;padding:20px;
+padding:80px 20px;text-align:center;
+background:#f5f7fb;
 }
-.hero h1{font-size:40px;}
-.hero p{margin-top:10px;font-size:18px;}
+.hero h1{font-size:42px}
+.hero p{margin:10px 0 20px;color:#666}
 .btn{
-margin-top:15px;background:#fff;color:#0a66c2;
+background:#0a66c2;color:#fff;
 padding:12px 25px;border-radius:25px;text-decoration:none;
 }
 
 /* SECTION */
-.section{padding:60px 40px;text-align:center;}
-.section h2{margin-bottom:30px;font-size:30px;}
+.section{padding:70px 60px}
+.section h2{margin-bottom:20px}
 
-/* GRID */
+/* SERVICES */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 .card{
-background:#fff;padding:25px;border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-cursor:pointer;transition:.3s;
+border:1px solid #eee;padding:25px;border-radius:10px;
+transition:.3s;
 }
 .card:hover{transform:translateY(-5px);}
 
-/* ANIMATION */
-.fade{opacity:0;transform:translateY(20px);transition:1s;}
-.show{opacity:1;transform:translateY(0);}
+/* WHY */
+.why{display:flex;flex-wrap:wrap;gap:20px}
+.why div{flex:1 1 200px}
 
 /* FOOTER */
-footer{padding:30px;text-align:center;background:#f5f7fb;color:#666;}
-
-/* WHATSAPP BUTTON */
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:15px;border-radius:50%;
-font-size:20px;text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
+footer{padding:40px;text-align:center;background:#f5f7fb}
 </style>
 
 </head>
@@ -78,76 +61,67 @@ box-shadow:0 5px 15px rgba(0,0,0,0.2);
 <nav>
 <div class="logo">
 <img src="logo.png">
-<span>WeGrowTech</span>
+<b>WeGrowTech</b>
 </div>
 
 <div>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+<a href="services.html">Services</a>
+<a href="amc.html">AMC</a>
+<a href="contact.html">Contact</a>
 </div>
 </nav>
 
 <div class="hero">
-<h1>Reliable IT AMC for Your Business 🚀</h1>
-<p>Desktop | Network | Microsoft 365 | Security</p>
-<a href="#contact" class="btn">Get Consultation</a>
+<h1>Reliable IT Support for Growing Businesses</h1>
+<p>We manage your IT so you can focus on growth.</p>
+<a href="contact.html" class="btn">Get Started</a>
 </div>
 
-<div class="section fade" id="services">
-<h2>Our Services</h2>
+<div class="section">
+<h2>Our Core Services</h2>
 
 <div class="grid">
-<div class="card" onclick="location.href='desktop.html'">
+<div class="card" onclick="location.href='services.html'">
 <h3>Desktop Support</h3>
-<p>Complete troubleshooting & maintenance</p>
+<p>End-to-end troubleshooting & maintenance</p>
 </div>
 
-<div class="card" onclick="location.href='amc.html'">
+<div class="card" onclick="location.href='services.html'">
 <h3>AMC Services</h3>
-<p>Annual maintenance & monitoring</p>
+<p>Annual contracts with proactive monitoring</p>
 </div>
 
-<div class="card" onclick="location.href='network.html'">
-<h3>Network Setup</h3>
-<p>LAN, WiFi, firewall configuration</p>
+<div class="card" onclick="location.href='services.html'">
+<h3>Network Management</h3>
+<p>Secure and scalable network solutions</p>
 </div>
 
-<div class="card" onclick="location.href='m365.html'">
+<div class="card" onclick="location.href='services.html'">
 <h3>Microsoft 365</h3>
-<p>Email & cloud solutions</p>
+<p>Cloud, email & collaboration setup</p>
 </div>
 </div>
 </div>
 
-<div class="section fade" id="contact">
-<h2>Contact Us</h2>
+<div class="section">
+<h2>Why WeGrowTech</h2>
 
-<form action="https://formspree.io/f/yourid" method="POST">
-<input name="name" placeholder="Name" required><br><br>
-<input name="email" placeholder="Email" required><br><br>
-<textarea name="message" placeholder="Message"></textarea><br><br>
-<button class="btn">Send</button>
-</form>
+<div class="why">
+<div><b>Fast Response</b><br>Quick resolution for all issues</div>
+<div><b>Experienced Team</b><br>Certified engineers</div>
+<div><b>Cost Effective</b><br>Affordable AMC plans</div>
+</div>
+</div>
 
+<div class="section">
+<h2>Let’s Talk</h2>
+<p>Email: info@wegrowtech.in</p>
+<a href="https://wa.me/91XXXXXXXXXX" class="btn">WhatsApp Us</a>
 </div>
 
 <footer>
 © 2026 WeGrowTech
 </footer>
-
-<!-- WhatsApp -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
-
-<script>
-/* SCROLL ANIMATION */
-const faders = document.querySelectorAll('.fade');
-window.addEventListener('scroll', ()=>{
-faders.forEach(el=>{
-const top = el.getBoundingClientRect().top;
-if(top < window.innerHeight-100){ el.classList.add('show'); }
-});
-});
-</script>
 
 </body>
 </html>
