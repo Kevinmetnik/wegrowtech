@@ -1,182 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WeGrowTech</title>
-
-<style>
-body {
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#f5f7fb;
-}
-
-/* NAVBAR */
-nav {
-    position:sticky;
-    top:0;
-    z-index:1000;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 40px;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav img {
-    height:60px;
-}
-
-/* NAV LINKS */
-nav a {
-    margin-left:20px;
-    text-decoration:none;
-    color:#333;
-    cursor:pointer;
-}
-
-nav a:hover {
-    color:#0a66c2;
-}
-
-/* HERO */
-.hero {
-    background:linear-gradient(135deg,#0a66c2,#00c6ff);
-    color:white;
-    padding:100px 20px;
-    text-align:center;
-}
-
-/* SECTION */
-.section {
-    padding:60px 20px;
-    text-align:center;
-}
-
-/* GRID */
-.grid {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.box {
-    background:white;
-    margin:15px;
-    padding:25px;
-    width:260px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.box:hover {
-    transform:translateY(-8px);
-    background:#0a66c2;
-    color:white;
-}
-
-/* DETAILS POPUP */
-.popup {
-    display:none;
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    width:300px;
-}
-
-.popup button {
-    margin-top:15px;
-    padding:8px 15px;
-}
-
-/* FOOTER */
-footer {
-    background:#0a66c2;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-</style>
-
-<script>
-function showDetails(service) {
-    document.getElementById("popupText").innerText = service;
-    document.getElementById("popup").style.display = "block";
-}
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-</script>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <img src="logo.png">
     <div>
-        <a onclick="document.getElementById('services').scrollIntoView()">Services</a>
-        <a onclick="document.getElementById('plans').scrollIntoView()">AMC</a>
-        <a onclick="document.getElementById('contact').scrollIntoView()">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="amc.html">AMC</a>
+        <a href="contact.html">Contact</a>
     </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
     <h1>WeGrowTech 🚀</h1>
     <p>Professional IT Support & AMC Services</p>
+    <a class="btn" href="contact.html">Contact Us</a>
 </div>
 
-<!-- SERVICES -->
-<div class="section" id="services">
-<h2>Our IT Services</h2>
+<div class="section">
+<h2>Our Services</h2>
 
 <div class="grid">
-<div class="box" onclick="showDetails('Desktop Support: Complete troubleshooting & maintenance')">Desktop Support</div>
-<div class="box" onclick="showDetails('AMC Maintenance: Regular IT health checks')">AMC Maintenance</div>
-<div class="box" onclick="showDetails('Network Setup: LAN, WiFi, Firewall setup')">Network Setup</div>
-<div class="box" onclick="showDetails('Printer Support: Installation & troubleshooting')">Printer Support</div>
-<div class="box" onclick="showDetails('Microsoft 365: Setup & management')">Microsoft 365</div>
+<div class="card">Desktop Support</div>
+<div class="card">AMC Maintenance</div>
+<div class="card">Network Setup</div>
+<div class="card">Microsoft 365</div>
 </div>
 
 </div>
 
-<!-- PLANS -->
-<div class="section" id="plans">
-<h2>AMC Plans</h2>
-
-<div class="grid">
-<div class="box" onclick="showDetails('Basic Plan: Reactive support')">Basic</div>
-<div class="box" onclick="showDetails('Standard Plan: Preventive + support')">Standard</div>
-<div class="box" onclick="showDetails('Premium Plan: Full IT management')">Premium</div>
-</div>
-
-</div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-<h2>Contact Us</h2>
-<p>Email: info@wegrowtech.in</p>
-<p>Phone: +91 XXXXXXXX</p>
-</div>
-
-<!-- POPUP -->
-<div class="popup" id="popup">
-<p id="popupText"></p>
-<button onclick="closePopup()">Close</button>
-</div>
-
-<!-- FOOTER -->
 <footer>
 © 2026 WeGrowTech
 </footer>
