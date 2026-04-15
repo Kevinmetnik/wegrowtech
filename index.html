@@ -7,9 +7,8 @@
 <style>
 body {
     margin:0;
-    font-family:Arial;
+    font-family: 'Segoe UI', sans-serif;
     background:#f5f7fb;
-    color:#333;
 }
 
 /* NAVBAR */
@@ -23,34 +22,42 @@ nav {
 }
 
 nav img {
-    height:50px;
-}
-
-nav a {
-    margin-left:20px;
-    text-decoration:none;
-    color:#333;
+    height:55px;
 }
 
 /* HERO */
 .hero {
-    background:#0a66c2;
+    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover;
     color:white;
-    padding:60px 40px;
+    padding:100px 20px;
     text-align:center;
 }
 
 .hero h1 {
-    font-size:40px;
+    font-size:42px;
+}
+
+.hero p {
+    font-size:18px;
+}
+
+.btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#0a66c2;
+    color:white;
+    border-radius:25px;
+    text-decoration:none;
 }
 
 /* SECTION */
 .section {
-    padding:50px 40px;
+    padding:60px 20px;
     text-align:center;
 }
 
-/* SERVICES GRID */
+/* GRID */
 .grid {
     display:flex;
     flex-wrap:wrap;
@@ -61,31 +68,20 @@ nav a {
     background:white;
     margin:15px;
     padding:25px;
-    width:280px;
-    border-radius:10px;
+    width:260px;
+    border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
     transition:0.3s;
 }
 
 .box:hover {
-    transform:translateY(-5px);
-}
-
-/* BUTTON */
-.btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 20px;
-    background:#0a66c2;
-    color:white;
-    border-radius:20px;
-    text-decoration:none;
+    transform:translateY(-8px);
 }
 
 /* FOOTER */
 footer {
-    background:#222;
-    color:#aaa;
+    background:#0a66c2;
+    color:white;
     padding:20px;
     text-align:center;
 }
@@ -94,8 +90,9 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-    <img src="logo.png" style="height:50px;">
+    <img src="logo.png">
     <div>
         <a href="#">Home</a>
         <a href="#">Services</a>
@@ -104,60 +101,50 @@ footer {
     </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-    <h1>IT AMC Services for Your Business</h1>
-    <p>Reliable Desktop Support, Network Management & IT Solutions</p>
+    <h1>Grow Your Business with Smart IT Support 🚀</h1>
+    <p>Desktop Support | AMC | Network | Microsoft 365</p>
+
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Contact on WhatsApp</a>
 </div>
 
+<!-- SERVICES -->
 <div class="section">
 <h2>Our IT Services</h2>
 
 <div class="grid">
-<div class="box">Desktop Support</div>
-<div class="box">AMC Maintenance</div>
-<div class="box">Network Setup</div>
-<div class="box">Printer Support</div>
-<div class="box">Microsoft 365</div>
-<div class="box">Server Support</div>
+<div class="box">💻 Desktop Support</div>
+<div class="box">🛠 AMC Maintenance</div>
+<div class="box">🌐 Network Setup</div>
+<div class="box">🖨 Printer Support</div>
+<div class="box">☁ Microsoft 365</div>
+<div class="box">🖥 Server Support</div>
 </div>
 
 </div>
 
+<!-- WHY US -->
 <div class="section">
-<h2>Why Choose Us?</h2>
+<h2>Why Choose WeGrowTech?</h2>
 
 <div class="grid">
-<div class="box">24/7 Support</div>
-<div class="box">Experienced Engineers</div>
-<div class="box">Quick Response Time</div>
+<div class="box">⚡ Fast Response</div>
+<div class="box">👨‍💻 Expert Engineers</div>
+<div class="box">📞 24/7 Support</div>
 </div>
 
 </div>
 
+<!-- CTA -->
 <div class="section">
-<h2>AMC Plans</h2>
+<h2>Need IT Support?</h2>
+<p>Contact us today for AMC services</p>
 
-<div class="grid">
-<div class="box">
-<h3>Basic</h3>
-<p>Reactive Support</p>
+<a class="btn" href="mailto:info@wegrowtech.in">Email Us</a>
 </div>
 
-<div class="box">
-<h3>Standard</h3>
-<p>Preventive + Support</p>
-</div>
-
-<div class="box">
-<h3>Premium</h3>
-<p>Complete IT Management</p>
-</div>
-</div>
-
-<a class="btn" href="#">Contact Us</a>
-
-</div>
-
+<!-- FOOTER -->
 <footer>
 © 2026 WeGrowTech | All Rights Reserved
 </footer>
