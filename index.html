@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WeGrowTech - IT AMC Services</title>
+<title>WeGrowTech</title>
 
 <style>
 body {
@@ -13,42 +13,39 @@ body {
 
 /* NAVBAR */
 nav {
+    position:sticky;
+    top:0;
+    z-index:1000;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 40px;
-    background:#fff;
+    padding:10px 40px;
+    background:white;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav img {
-    height:55px;
+    height:60px;
+}
+
+/* NAV LINKS */
+nav a {
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
+    cursor:pointer;
+}
+
+nav a:hover {
+    color:#0a66c2;
 }
 
 /* HERO */
 .hero {
-    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover;
+    background:linear-gradient(135deg,#0a66c2,#00c6ff);
     color:white;
     padding:100px 20px;
     text-align:center;
-}
-
-.hero h1 {
-    font-size:42px;
-}
-
-.hero p {
-    font-size:18px;
-}
-
-.btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#0a66c2;
-    color:white;
-    border-radius:25px;
-    text-decoration:none;
 }
 
 /* SECTION */
@@ -71,11 +68,33 @@ nav img {
     width:260px;
     border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    cursor:pointer;
     transition:0.3s;
 }
 
 .box:hover {
     transform:translateY(-8px);
+    background:#0a66c2;
+    color:white;
+}
+
+/* DETAILS POPUP */
+.popup {
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    width:300px;
+}
+
+.popup button {
+    margin-top:15px;
+    padding:8px 15px;
 }
 
 /* FOOTER */
@@ -86,6 +105,18 @@ footer {
     text-align:center;
 }
 </style>
+
+<script>
+function showDetails(service) {
+    document.getElementById("popupText").innerText = service;
+    document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
 </head>
 
 <body>
@@ -94,59 +125,60 @@ footer {
 <nav>
     <img src="logo.png">
     <div>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">AMC</a>
-        <a href="#">Contact</a>
+        <a onclick="document.getElementById('services').scrollIntoView()">Services</a>
+        <a onclick="document.getElementById('plans').scrollIntoView()">AMC</a>
+        <a onclick="document.getElementById('contact').scrollIntoView()">Contact</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Grow Your Business with Smart IT Support 🚀</h1>
-    <p>Desktop Support | AMC | Network | Microsoft 365</p>
-
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX">Contact on WhatsApp</a>
+    <h1>WeGrowTech 🚀</h1>
+    <p>Professional IT Support & AMC Services</p>
 </div>
 
 <!-- SERVICES -->
-<div class="section">
+<div class="section" id="services">
 <h2>Our IT Services</h2>
 
 <div class="grid">
-<div class="box">💻 Desktop Support</div>
-<div class="box">🛠 AMC Maintenance</div>
-<div class="box">🌐 Network Setup</div>
-<div class="box">🖨 Printer Support</div>
-<div class="box">☁ Microsoft 365</div>
-<div class="box">🖥 Server Support</div>
+<div class="box" onclick="showDetails('Desktop Support: Complete troubleshooting & maintenance')">Desktop Support</div>
+<div class="box" onclick="showDetails('AMC Maintenance: Regular IT health checks')">AMC Maintenance</div>
+<div class="box" onclick="showDetails('Network Setup: LAN, WiFi, Firewall setup')">Network Setup</div>
+<div class="box" onclick="showDetails('Printer Support: Installation & troubleshooting')">Printer Support</div>
+<div class="box" onclick="showDetails('Microsoft 365: Setup & management')">Microsoft 365</div>
 </div>
 
 </div>
 
-<!-- WHY US -->
-<div class="section">
-<h2>Why Choose WeGrowTech?</h2>
+<!-- PLANS -->
+<div class="section" id="plans">
+<h2>AMC Plans</h2>
 
 <div class="grid">
-<div class="box">⚡ Fast Response</div>
-<div class="box">👨‍💻 Expert Engineers</div>
-<div class="box">📞 24/7 Support</div>
+<div class="box" onclick="showDetails('Basic Plan: Reactive support')">Basic</div>
+<div class="box" onclick="showDetails('Standard Plan: Preventive + support')">Standard</div>
+<div class="box" onclick="showDetails('Premium Plan: Full IT management')">Premium</div>
 </div>
 
 </div>
 
-<!-- CTA -->
-<div class="section">
-<h2>Need IT Support?</h2>
-<p>Contact us today for AMC services</p>
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact Us</h2>
+<p>Email: info@wegrowtech.in</p>
+<p>Phone: +91 XXXXXXXX</p>
+</div>
 
-<a class="btn" href="mailto:info@wegrowtech.in">Email Us</a>
+<!-- POPUP -->
+<div class="popup" id="popup">
+<p id="popupText"></p>
+<button onclick="closePopup()">Close</button>
 </div>
 
 <!-- FOOTER -->
 <footer>
-© 2026 WeGrowTech | All Rights Reserved
+© 2026 WeGrowTech
 </footer>
 
 </body>
